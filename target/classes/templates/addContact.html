@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление контакта</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+<h2>Добавление контакта:</h2>
+<form name="newContact" action="/contact" method="post">
+    <label class="text"> Имя контакта:
+        <input type="text" class="field" size="60" required="required" name="name">
+    </label><br><br>
+    <label class="text"> Номер телефона:
+        <input type="tel" class="field" size="60" required="required" name="phone">
+    </label><br><br>
+    <input type="submit" class="button" value="Добавить">
+</form>
+</body>
+</html>

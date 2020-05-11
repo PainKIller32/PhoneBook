@@ -1,0 +1,53 @@
+.contactName {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.contactPhone {
+    display: block;
+    margin-top: 5px;
+}
+
+.text {
+    display: inline-block;
+    height: 30px;
+}
+
+.button {
+    margin-left: 20px;
+    width: 120px;
+    height: 30px;
+}
+
+.search {
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.field {
+    position: absolute;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 30px;
+    left: 150px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.forms {
+    width: 500px;
+}
+
+hr {
+    display: inline-block;
+    width: 500px;
+}
+
+ul {
+    padding-inline-start: 60px;
+}

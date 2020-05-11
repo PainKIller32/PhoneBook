@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование контакта</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+<h2>Редактирование контакта:</h2>
+<form th:action="@{/contact/{id}(id=${contact.getId()})}" method="post">
+    <label class="text"> Имя контакта:
+        <input type="text" class="field" required="required" name="name" th:value="${contact.getName()}">
+    </label><br><br>
+    <label class="text"> Номер телефона:
+        <input type="tel" class="field" required="required" name="phone" th:value="${contact.getPhone()}">
+    </label><br><br>
+    <input type="submit" class="button" value="Сохранить">
+</form><br>
+<form th:action="@{/contact/{id}(id=${contact.getId()})}" method="get">
+    <input type="submit" class="button" value="Удалить">
+</form>
+</body>
+</html>

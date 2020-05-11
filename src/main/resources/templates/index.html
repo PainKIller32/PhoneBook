@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Телефонная книга</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+
+<div class="forms">
+    <h2 align="center">Список контактов</h2>
+    <form action="/contact/search" method="get">
+        <p align="right"><input type="search" class="search" size="60" required="required" name="query">
+            <input type="submit" class="button" value="Найти"></p>
+    </form>
+    <form action="/contact/add">
+        <p align="right"><input type="submit" class="button" value="Добавить"></p>
+    </form>
+</div>
+<hr>
+<ul id="list">
+    <li th:each="contact:${contacts}">
+        <article>
+            <p th:utext="${contact.getId()}" style="display: none"></p>
+            <a th:href="@{'/contact/edit?id=' + ${contact.getId()}}" th:utext="${contact.getName()}" class="contactName"></a>
+            <p th:utext="${'Телефон: ' + contact.getPhone()}" class="contactPhone"></p>
+        </article>
+    </li>
+</ul>
+</body>
+</html>
