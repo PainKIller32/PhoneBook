@@ -12,7 +12,7 @@
         <input type="text" class="field" required="required" name="name" th:value="${contact.getName()}">
     </label><br><br>
     <label class="text"> Номер телефона:
-        <input type="tel" class="field" required="required" name="phone" th:value="${contact.getPhone()}">
+        <input type="tel" pattern="^[0-9\(\)\+\-\s]+$" class="field" required="required" name="phone" th:value="${contact.getPhone()}">
     </label><br><br>
     <input type="submit" class="button" value="Сохранить">
 </form><br>

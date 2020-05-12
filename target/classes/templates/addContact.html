@@ -12,7 +12,7 @@
         <input type="text" class="field" size="60" required="required" name="name">
     </label><br><br>
     <label class="text"> Номер телефона:
-        <input type="tel" class="field" size="60" required="required" name="phone">
+        <input type="tel" pattern="^[0-9\(\)\+\-\s]+$" class="field" size="60" required="required" name="phone">
     </label><br><br>
     <input type="submit" class="button" value="Добавить">
 </form>
